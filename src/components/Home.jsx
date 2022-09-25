@@ -16,23 +16,25 @@ const Home = () => {
   }, []);
   return (
     <>
-      <h1>Hello</h1>
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Price</th>
-        </tr>
-        {data.map(({ name, price }) => {
-          return (
-            <>
-              <tr>
-                <td className="text-center">{name}</td>
-                <td>{price}</td>
-              </tr>
-            </>
-          );
-        })}
-      </table>
+      <div className="flex flex-col items-center  h-screen ">
+        <h1 className="text-4xl font-bold my-10">Cryptocurrency Prices</h1>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+          {data.map(({ name, price }) => {
+            return (
+              <>
+                <tr>
+                  <td className="text-center">{name}</td>
+                  <td>{price}</td>
+                </tr>
+              </>
+            );
+          })}
+        </table>
+      </div>
     </>
   );
 };
